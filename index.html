@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV ChargeOps - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ EV ChargeOps</h1>
+            <p>Dashboard de Rateio Inteligente e IA - Energy Innovation Lab</p>
+        </header>
+        
+        <section class="ia-panel">
+            <h2>🤖 Insights de Inteligência Artificial</h2>
+            <div class="ia-card" id="ia-content">
+                Carregando modelo preditivo... (Rode o charge_ops_core.py)
+            </div>
+        </section>
+
+        <section class="dashboard-grid">
+            <div class="card">
+                <h3>Consumo Total (kWh)</h3>
+                <p class="big-number" id="total-kwh">0</p>
+            </div>
+            <div class="card">
+                <h3>Custo Total Rateado</h3>
+                <p class="big-number" id="total-cost">R$ 0,00</p>
+            </div>
+            <div class="card">
+                <h3>Sessões Processadas</h3>
+                <p class="big-number" id="total-sessions">0</p>
+            </div>
+        </section>
+
+        <section class="history-panel">
+            <h2>Extrato de Rateio por Morador</h2>
+            <div class="table-container">
+                <table id="sessions-table">
+                    <thead>
+                        <tr>
+                            <th>Usuário</th>
+                            <th>Horário da Sessão</th>
+                            <th>Consumo (kWh)</th>
+                            <th>Tarifa Aplicada</th>
+                            <th>Custo Rateado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Linhas geradas dinamicamente via JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+    <script src="dados_processados.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
